@@ -1,0 +1,5 @@
+:root{
+--bp-sm:480px;--bp-md:768px;--bp-lg:1024px;--bp-xl:1280px;--bp-2xl:1536px;
+--grid-columns:12;/* @kind other */--z-dropdown:1000;/* @kind other */--z-sticky:1100;/* @kind other */--z-overlay:1200;/* @kind other */--z-modal:1300;/* @kind other */--z-toast:1400;/* @kind other */--z-tooltip:1500;/* @kind other */
+--opacity-disabled:.45;/* @kind other */--opacity-hover-overlay:.04;/* @kind other */--blur-overlay:6px;/* @kind other */
+}

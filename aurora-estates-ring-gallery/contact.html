@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact PropX</title>
+<link rel="stylesheet" href="assets/tokens/fonts.css">
+<link rel="stylesheet" href="assets/tokens/colors.css">
+<link rel="stylesheet" href="assets/tokens/typography.css">
+<link rel="stylesheet" href="assets/tokens/spacing.css">
+<link rel="stylesheet" href="assets/tokens/radius.css">
+<link rel="stylesheet" href="assets/tokens/motion.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">PropX</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="#" class="lang-active" aria-current="true">En</a>
+      <span aria-hidden="true">/</span>
+      <a href="#" dir="rtl" lang="ur">اردو</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" hidden aria-label="Mobile">
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="contact-page">
+  <div class="contact-card">
+    <div class="contact-card-head">
+      <div>
+        <div class="contact-eyebrow">Get in touch</div>
+        <h1>Contact PropX</h1>
+      </div>
+      <a class="contact-close" href="index.html">Close ×</a>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="contact-field">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="name" required>
+        </div>
+        <div class="contact-field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+      </div>
+      <div class="contact-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="contact-field">
+        <label for="interest">I'm interested in</label>
+        <select id="interest" name="interest">
+          <option value="">Select an interest</option>
+          <option>Luxury Apartments</option>
+          <option>Villas</option>
+          <option>Commercial</option>
+          <option>Waterfront</option>
+          <option>Sky Residences</option>
+          <option>Plots</option>
+          <option>Retail Spaces</option>
+          <option>Farmhouses</option>
+          <option>Smart Homes</option>
+          <option>Penthouses</option>
+          <option>Affordable Luxury</option>
+          <option>Upcoming Projects</option>
+        </select>
+      </div>
+      <div class="contact-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div class="contact-actions">
+        <button type="submit" class="contact-submit">Send enquiry <span>+</span></button>
+      </div>
+      <p class="contact-status" id="contactStatus" hidden>Thank you — we'll be in touch shortly.</p>
+    </form>
+  </div>
+</main>
+
+<script>
+document.getElementById('hamburgerBtn').addEventListener('click',function(){
+  var nav=document.getElementById('mobileNav');
+  var open=nav.hidden;
+  nav.hidden=!open;
+  this.setAttribute('aria-expanded',String(open));
+});
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('contactStatus').hidden=false;
+  this.reset();
+});
+</script>
+</body>
+</html>
